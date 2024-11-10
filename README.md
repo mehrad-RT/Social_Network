@@ -1,6 +1,6 @@
 # Social_Network
 
-#About The Project
+# About The Project
 
 This project is the backend of a simple social network site, similar to X Social media. Users can post comments, like or dislike other posts, and edit their own posts. Additionally, there is a following section where users can view posts only from the people they follow.
 
