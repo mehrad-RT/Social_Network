@@ -1,0 +1,33 @@
+.allPosts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 30px;
+}
+.postInput {
+    border: 1px solid gray;
+    padding: 7px;
+  }
+
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid gray;
+    margin: 3px;
+    padding: 7px;
+}
+.date{
+    font-size:small;
+    color: gray;
+}
+
+.fa {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+.fa:hover {
+    color: darkblue;
+  }
+

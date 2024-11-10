@@ -1,0 +1,52 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+<script>
+    function likeHandler(id , liked_people) {
+        const btn = document.getElementById(`${id}`);
+
+        btn.classList.remove('fa-thumbs-up');
+        btn.classList.remove('fa-thumbs-down');
+
+        if(liked_people.includes(id)) {
+            fetch(`/not_like/${id}`)
+                .then(response => response.json())
+                .then(result => {
+                    btn.classList.add('fa-thumbs-up');
+                });
+        } else {
+            fetch(`/add_like/${id}`)
+                .then(response => response.json())
+                .then(result => {
+                    btn.classList.add('fa-thumbs-down');
+                });
+        }
+    }
+
+</script>
+
+    <h1 class="mx-4">Following</h1>
+
+    <div class="allPosts">
+        {% for post in posts_inside_the_page %}
+            <div class="row post mx-3">
+                <h5 class="username"><a href="{% url 'profile' user_id=post.user.id %}">@{{ post.user }}</a></h5>
+                <h6 class="content">{{ post.content }}</h6>
+                <p class="date">{{ post.date }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <nav aria-label="Page navigation example" >
+        <ul class="pagination d-flex justify-content-center">
+            {% if posts_inside_the_page.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ posts_inside_the_page.previous_page_number }}">Previous</a></li>
+            {% endif %}
+            {% if posts_inside_the_page.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{posts_inside_the_page.next_page_number}}">Next</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+{% endblock %}
