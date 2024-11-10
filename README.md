@@ -48,6 +48,5 @@ Push to the Branch (git push origin feature/AmazingFeature)
 Open a Pull Request
 
 ## License
-Distributed under the MIT License. See LICENSE.txt for more information.
-
+Distributed under the MIT License. See [License](License.txt) for more information.
 
