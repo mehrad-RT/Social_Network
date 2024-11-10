@@ -10,16 +10,17 @@ This project requires Python and pip installed on your system. Also, Django need
 
 ```bash
 pip install django
-
+```
 ## Installation
 
 To get started with this project, please follow the steps below:
 
 1. Clone the Repository:
 
+```bash
 git clone https://github.com/mehrad-RT/Social_Network.git
 cd Social_Network
-
+```
 2. Install Dependencies:
 
 Ensure that Django and other necessary dependencies are installed (as outlined in the prerequisites).
@@ -27,9 +28,9 @@ Ensure that Django and other necessary dependencies are installed (as outlined i
 3. Start the Server:
 
 Start the local Django server by running:
-
+```bash
 python manage.py runserver
-        
+```        
     
 4. Access the Project:
 
